@@ -70,11 +70,15 @@ student number : 2025047026
 
 ## 3. Dockerfile 및 실행 결과
 
-> 작성 요령: Dockerfile 내용 작성 <- 작성 완료 후 삭제
-
 ### ✔ Dockerfile
 ```Dockerfile
-# 작성한 Dockerfile 내용
+FROM ubuntu:24.04
+WORKDIR /app
+COPY src/mini.c .
+RUN apt update && \
+    apt install -y gcc && \
+    gcc mini.c -o mini
+CMD ["./mini"]
 ```
 
 > 작성 요령: 이미지 빌드 과정 및 이미지 실행 과정 작성(화면 캡쳐) <- 작성 완료 후 삭제
