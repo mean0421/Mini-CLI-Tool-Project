@@ -27,29 +27,44 @@ mini-cli/
 
 ## 🚀 1. Mini 프로그램
 
-
 ### ✔ 코드
-> 작성 요령: 소스 코드 작성  <- 작성 완료 후 삭제
+
 
 ```c
-// mini.c 또는 mini.sh 내용을 여기에 작성하세요.
+#include <stdio.h>
+int main() {
+    for (int i = 0;i < 5;i++) {
+        printf("Hello from Mini C Program!\n");
+    }
+    printf("name : 김민중\n");
+    printf("student number : 2025047026\n");
+    return 0;
+}
 ```
 
 ---
 
 ## 🧪 2. Linux 실행 결과
 
-> 작성 요령: 개발 환경 설치 과정 및 실행 과정 작성 <- 작성 완료 후 삭제
-
 ### ✔ 실행 명령어
 ```bash
-# 프로그램 소스 코드
+# 개발 환경 설치 과정
+sudo apt update
+sudo apt install -y build-essential
+# 실행 과정
 gcc src/mini.c -o mini
 ./mini
-
+Hello from mini C Program!
+Hello from mini C Program!
+Hello from mini C Program!
+Hello from mini C Program!
+Hello from mini C Program!
+name : 김민중
+student number : 2025047026
+```
 
 ### 실행 화면 캡처  
-(예: `docs/images/linux-run.png`)
+![Linux 실행 화면](docs/images/linux-run.png)
 
 ---
 
