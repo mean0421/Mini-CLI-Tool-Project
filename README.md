@@ -51,14 +51,17 @@ int main() {
 # 개발 환경 설치 과정
 sudo apt update
 sudo apt install -y build-essential
+
 # 실행 과정
 gcc src/mini.c -o mini
 ./mini
-Hello from mini C Program!
-Hello from mini C Program!
-Hello from mini C Program!
-Hello from mini C Program!
-Hello from mini C Program!
+
+#실행 결과
+Hello from Mini C Program!
+Hello from Mini C Program!
+Hello from Mini C Program!
+Hello from Mini C Program!
+Hello from Mini C Program!
 name : 김민중
 student number : 2025047026
 ```
@@ -86,15 +89,47 @@ CMD ["./mini"]
 ### ✔ Docker 이미지 빌드
 ```bash
 docker build -t mini-cli .
+
+#빌드 결과
+[+] Building 2.8s (9/9) FINISHED                                                                    docker:default
+ => [internal] load build definition from Dockerfile                                                          0.0s
+ => => transferring dockerfile: 174B                                                                          0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:24.04                                               2.2s
+ => [internal] load .dockerignore                                                                             0.0s
+ => => transferring context: 2B                                                                               0.0s
+ => [1/4] FROM docker.io/library/ubuntu:24.04@sha256:c35e29c9450151419d9448b0fd75374fec4fff364a27f176fb458d4  0.1s
+ => => resolve docker.io/library/ubuntu:24.04@sha256:c35e29c9450151419d9448b0fd75374fec4fff364a27f176fb458d4  0.1s
+ => [internal] load build context                                                                             0.0s
+ => => transferring context: 279B                                                                             0.0s
+ => CACHED [2/4] WORKDIR /app                                                                                 0.0s
+ => CACHED [3/4] COPY src/mini.c .                                                                            0.0s
+ => CACHED [4/4] RUN apt update &&     apt install -y gcc &&     gcc mini.c -o mini                           0.0s
+ => exporting to image                                                                                        0.2s
+ => => exporting layers                                                                                       0.0s
+ => => exporting manifest sha256:7c7a7a36786f9d10df0e10690b857d1149538c7e5fb8e3f5c98f30d59979a2df             0.0s
+ => => exporting config sha256:687c81153aa9898b8bd806026511a2cb97e9703628259851d5c9331b7a3b1c3a               0.0s
+ => => exporting attestation manifest sha256:8ceb26849e444ad2c69aab9e9ffbc39990dececa04d3739bd7ffc49cc87d0f5  0.1s
+ => => exporting manifest list sha256:235b1694b746686810049fd93e506aff91d872a2e88f8095a496e884b6b8c84c        0.0s
+ => => naming to docker.io/library/mini-cli:latest                                                            0.0s
+ => => unpacking to docker.io/library/mini-cli:latest                                                         0.0s
 ```
 
 ### ✔ Docker 실행
 ```bash
 docker run --rm mini-cli
+
+#실행 결과
+Hello from Mini C Program!
+Hello from Mini C Program!
+Hello from Mini C Program!
+Hello from Mini C Program!
+Hello from Mini C Program!
+name : 김민중
+student number : 2025047026
 ```
 
 ### ✔ 실행 화면 캡처  
-(예: `docs/images/docker-run.png`)
+![Docker 실행 화면](docs/images/docker-run.png)
 
 ---
 
