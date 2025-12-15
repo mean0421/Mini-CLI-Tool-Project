@@ -138,19 +138,21 @@ student number : 2025047026
 > 작성 요령: 의미 있는 커밋 메시지 및 브랜치 사용 <- 작성 완료 후 삭제
 
 ### 체크리스트
-- [ ] Commit 5회 이상  
-- [ ] Branch 생성  
-- [ ] Branch → main Merge  
-- [ ] 의미 있는 Commit 메시지  
+- [x] Commit 5회 이상  
+- [x] Branch 생성  
+- [x] Branch → main Merge  
+- [x] 의미 있는 Commit 메시지  
 
 ### 설명
-예)
-```
-feature/output-update 브랜치를 생성해 기능을 수정하고 main으로 merge함.
+
+``
+feature/mini-program 브랜치를 생성해 mini.c을 수정하고 main으로 merge함.
+feature/docker 브랜치를 생성해 Dockerfile을 수정하고 main으로 merge함.
+커밋 메시지 작성 시 `Feat`, `Docs`, `Build` 등의 접두어를 사용하여 해당 커밋의 변경 성격을 명확히 설명함.
 ```
 
 ### 캡처
-(예: `docs/images/git-log.png`)
+![Git 로그 화면](docs/images/git-log.png)
 
 ---
 
