@@ -27,12 +27,19 @@ mini-cli/
 
 ## 🚀 1. Mini 프로그램
 
-
 ### ✔ 코드
-> 작성 요령: 소스 코드 작성  <- 작성 완료 후 삭제
+
 
 ```c
-// mini.c 또는 mini.sh 내용을 여기에 작성하세요.
+#include <stdio.h>
+int main() {
+    for (int i = 0;i < 5;i++) {
+        printf("Hello from Mini C Program!\n");
+    }
+    printf("name : 김민중\n");
+    printf("student number : 2025047026\n");
+    return 0;
+}
 ```
 
 ---
